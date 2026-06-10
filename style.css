@@ -1,0 +1,388 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success-color: #16a34a;
+    --warning-color: #ca8a04;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    position: relative;
+}
+
+/* Header Config */
+.app-header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+/* Navigation System Control */
+.app-view {
+    display: none;
+    flex-grow: 1;
+}
+
+.app-view.active {
+    display: block;
+}
+
+.back-nav {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Landing Elements & Calculator UI */
+.hero-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hero-section h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.calculator-card {
+    background: #f1f5f9;
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.calculator-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #cbd5e1;
+    border-radius: 5px;
+    outline: none;
+}
+
+.range-limits {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.result-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.result-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.result-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Features Grid layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.feature-item .icon {
+    font-size: 1.5rem;
+}
+
+.feature-item h4 {
+    font-size: 0.85rem;
+    margin: 5px 0 2px 0;
+}
+
+.feature-item p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* General Buttons UI */
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: var(--text-color);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Forms styling configuration */
+.step-indicator {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.phone-input-wrapper .prefix {
+    padding: 0 10px;
+    background: #f1f5f9;
+    border-right: 1px solid var(--border-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    line-height: 38px;
+}
+
+.phone-input-wrapper input {
+    border: none;
+}
+
+.pin-input-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.help-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 4px;
+}
+
+/* Application Confirmation Box */
+.summary-box {
+    background: #f8fafc;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.summary-box h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+/* Success status screens UI */
+.text-center { text-align: center; }
+.success-icon { font-size: 3rem; margin-bottom: 15px; }
+.redirect-text { color: var(--text-muted); font-size: 0.85rem; margin: 15px 0; }
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #cbd5e1;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 15px auto;
+}
+
+/* OTP UI Elements */
+.highlight-phone { font-weight: 700; margin: 10px 0 20px 0; font-size: 1.1rem; }
+.otp-inputs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+.otp-box { width: 50px; height: 50px; text-align: center; font-size: 1.5rem; font-weight: 700; border-radius: 8px; border: 1px solid var(--border-color); }
+
+.admin-wait-box {
+    background: #fdf8e2;
+    border: 1px solid #faecc1;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #664d03;
+}
+
+.spinner-small {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #faecc1;
+    border-top: 2px solid #664d03;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Dashboard dynamic details list cards */
+.success-banner { background: #f0fdf4; border-radius: var(--radius); padding: 15px; margin-bottom: 15px; border: 1px solid #bbf7d0; }
+.badge-icon { background: var(--success-color); color: #fff; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; justify-content: center; align-items: center; margin-bottom: 8px; font-weight: bold; }
+.approved-amount-card { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+.card-label { font-size: 0.75rem; opacity: 0.8; }
+.compliance-notice { background: #fff7ed; border: 1px solid #ffedd5; border-radius: 8px; padding: 15px; font-size: 0.85rem; margin-bottom: 20px; color: #9a3412; }
+.compliance-notice h4 { margin-bottom: 5px; }
+.details-list { border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+.details-list h3 { font-size: 1rem; margin-bottom: 12px; }
+.detail-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 8px 0; border-bottom: 1px solid var(--border-color); }
+.detail-row:last-child { border-bottom: none; }
+.actions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.action-btn { background: #f1f5f9; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 5px; font-size: 0.75rem; font-weight: 600; cursor: pointer; text-align: center; }
+.next-steps { font-size: 0.85rem; margin-top: 15px; color: var(--text-muted); }
+
+/* System Overlays */
+.overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.overlay.hidden { display: none; }
+.overlay-content { background: #fff; padding: 25px; border-radius: var(--radius); text-align: center; width: 280px; }
+.loader-circle { width: 40px; height: 40px; border: 4px solid #f1f5f9; border-top: 4px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
+
+/* Footers styling configurations */
+.app-footer, .login-footer { margin-top: auto; padding-top: 20px; text-align: center; color: var(--text-muted); font-size: 0.75rem; }
+.login-footer a { color: var(--primary-color); text-decoration: none; }
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  
